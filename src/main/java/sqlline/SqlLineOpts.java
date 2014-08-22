@@ -37,7 +37,7 @@ class SqlLineOpts implements Completer {
   private boolean autoCommit = true;
   private boolean verbose = false;
   private boolean force = false;
-  private boolean incremental = true;
+  private boolean incremental = false;
   private boolean showElapsedTime = true;
   private boolean showWarnings = true;
   private boolean showNestedErrs = false;

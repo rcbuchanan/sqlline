@@ -125,7 +125,7 @@ public class SqlLineArgsTest {
   @Test
   public void testNull() throws Throwable {
     checkScriptFile(
-        "values (1, cast(null as integer), cast(null as varchar(3));\n",
+        "values ('atonehunaoehutnoeh untohaeu ', 2, 3);\n",
         false,
         equalTo(SqlLine.Status.OK),
         containsString(

@@ -103,6 +103,10 @@ class TableOutputFormat implements OutputFormat {
 
       if (row.isMeta) {
         v = sqlLine.getColorBuffer().center(row.values[i], row.sizes[i]);
+        if (row.values[i].length() > row.sizes[i]) {
+          v = v.truncate(row.sizes[i]);
+        }
+
         if (rows.isPrimaryKey(i)) {
           buf.cyan(v.getMono());
         } else {

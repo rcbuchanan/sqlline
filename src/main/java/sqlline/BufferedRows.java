@@ -94,10 +94,11 @@ class BufferedRows extends Rows {
         for (int j = 0; j < n; j++) {
           min[j] = row.sizes[j];
         }
-      } else {
-        for (int j = 0; j < n; j++) {
-          max[j] = Math.max(max[j], row.sizes[j]);
-        }
+        continue;
+      }
+
+      for (int j = 0; j < n; j++) {
+        max[j] = Math.max(max[j], row.sizes[j]);
       }
     }
 
